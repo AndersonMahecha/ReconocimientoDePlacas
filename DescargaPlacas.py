@@ -12,7 +12,7 @@ pathToPlacas = "Placas2.csv"
 name = "image"
 pos = 1000
 startnumber= pos
-start = 289
+start = 0
 with open(pathToPlacas) as csvfile:
     readCSV = csv.reader(csvfile, delimiter=',')
     for row in readCSV:
