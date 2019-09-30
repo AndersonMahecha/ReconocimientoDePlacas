@@ -105,4 +105,4 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-carros/carro (126).JPG
+keras/vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5
