@@ -7,6 +7,15 @@ services:
       context: keras
     image: keras
     env_file: ./keras/keras.env
-    command: tail -F anything
+    depends_on:
+      - tesseract
+
+  tesseract:
+    container_name: tesseract
+    build: 
+      context: ocr-tesseract
+    image: tesseract
+    ports:
+      - "5000:5000"
 
   

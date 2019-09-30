@@ -45,6 +45,7 @@ RUN pip3 install tqdm
 RUN pip3 install keras-segmentation
 RUN pip3 install pytesseract
 RUN pip3 install matplotlib
+RUN pip3 install requests
 
 # quick test and dump package lists
 RUN python3 -c "import theano; print(theano.__version__)" \
