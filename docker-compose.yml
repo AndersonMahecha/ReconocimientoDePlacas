@@ -1,0 +1,12 @@
+version: '3'
+services:
+ 
+  keras:
+    container_name: keras
+    build:
+      context: keras
+    image: keras
+    env_file: ./keras/keras.env
+    command: tail -F anything
+
+  
