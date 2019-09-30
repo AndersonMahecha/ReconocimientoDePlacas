@@ -1,14 +1,13 @@
-from flask import Flask, render_template, request
+from flask import Flask, request
 from werkzeug import secure_filename
 import os
 import sys
 from PIL import Image
 import pytesseract
-import argparse
 import cv2
 
 app = Flask(__name__)
-UPLOAD_FOLDER = './static/uploads'
+UPLOAD_FOLDER = '.'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER 
 app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024
 
