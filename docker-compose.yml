@@ -7,6 +7,27 @@ services:
       context: keras
     image: keras
     env_file: ./keras/keras.env
-    command: tail -F anything
+    depends_on:
+      - tesseract
+    ports:
+      - "5001:5001"
+
+  tesseract:
+    container_name: tesseract
+    build: 
+      context: ocr-tesseract
+    image: tesseract
+    ports:
+      - "5000:5000"
+  web:
+    container_name: web
+    build: 
+      context: web
+    volumes: 
+      - "./web/parqueadero:/usr/src/app"
+    ports: 
+      - "4200:4200"
+    command: bash -c "npm install && ng serve --host 0.0.0.0 --port 4200"
+    
 
   

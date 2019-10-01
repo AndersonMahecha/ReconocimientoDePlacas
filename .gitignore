@@ -106,3 +106,4 @@ venv.bak/
 # mypy
 .mypy_cache/
 keras/vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5
+.vscode

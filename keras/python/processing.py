@@ -8,6 +8,7 @@ from PIL import Image
 import pytesseract
 from keras.models import load_model
 import json
+import requests
 
 
 salida = os.environ.get('EXIT_PATH')
@@ -95,7 +96,10 @@ def getPrediction(model, path):
     )
 
     cv2.imwrite(salidaBN, blackAndWhiteImage)
-    text = pytesseract.image_to_string(Image.open(salidaBN))
+    
+    url = 'http://tesseract:5000'
+    files = {'file': open(salidaBN, 'rb')}
+    text = requests.post(url, files=files).text
 
     os.remove(salidaBN)
     os.remove(salidaPlaca)
