@@ -69,4 +69,4 @@ COPY /python ./srv/python
 
 WORKDIR /srv/python
 
-CMD [ "python3", "./calleable.py" ]
+CMD executable[ "python3", "./calleable.py" ]

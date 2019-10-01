@@ -1,0 +1,45 @@
+<div id="homeContainer">
+        <div class="whiteBorderGlassBox">
+          <div class="homeHeadContainer">
+            <div class="row">
+              <div class="col-md-auto">
+                <div class="avatarActivo">
+                  <img src="assets/userImg.jpg" id="homeAvatarPicture">
+                </div>
+              </div>
+              <div class="col">
+                <b>Sergio</b>
+                <div>
+                  <span>Activo</span>
+                  <br />
+                  <span>< informacion personal y vehiculos con placa ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="whiteContainerPadded marto15">
+                    
+            <div class="row">
+                <div class="col">
+                        <input  type="text" class="form-control" placeholder="Buscar usuario" [(ngModel)]="query"/>
+                </div>
+            </div>
+
+                    <b>Busqueda</b><br/>
+                    
+                    <br/><br/>
+                    <b>usuarios</b>
+                    <p class="marto15">User - id - nombre - telefono - cargo</p>
+                    
+                    
+                    <ng-container *ngFor="let user of usuarios | search: query;let i=index">
+                        <div>
+                            <a routerLink="/perfil/{{user.uid}}">
+                            {{i+1}} - {{user.idUsuario}} - {{user.nombre}} - {{user.telefono}}
+                            - {{user.cargo}}
+                            </a>
+                        </div>
+                    </ng-container>
+        </div>
+</div>

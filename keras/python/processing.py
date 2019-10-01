@@ -101,8 +101,8 @@ def getPrediction(model, path):
     files = {'file': open(salidaBN, 'rb')}
     text = requests.post(url, files=files).text
 
-    #os.remove(salidaBN)
-    #os.remove(salidaPlaca)
-    #os.remove(salidaPrediccion)
+    os.remove(salidaBN)
+    os.remove(salidaPlaca)
+    os.remove(salidaPrediccion)
 
     return text, original, recortada
