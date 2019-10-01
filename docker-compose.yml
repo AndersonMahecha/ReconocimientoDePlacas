@@ -9,6 +9,8 @@ services:
     env_file: ./keras/keras.env
     depends_on:
       - tesseract
+    ports:
+      - "8080:8080"
 
   tesseract:
     container_name: tesseract

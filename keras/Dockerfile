@@ -32,6 +32,9 @@ RUN apt-get update -qq \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
+RUN apt-get update -y
+RUN apt-get install -y python-pip python-dev build-essential
+RUN apt update && apt install -y libsm6 libxext6
 
 ARG THEANO_VERSION=1.0.1
 ENV THEANO_FLAGS='device=cpu,floatX=float32'
@@ -40,17 +43,25 @@ RUN pip3 --no-cache-dir install git+https://github.com/Theano/Theano.git@rel-${T
 ARG KERAS_VERSION=2.1.4
 ENV KERAS_BACKEND=theano
 RUN pip3 --no-cache-dir install --no-dependencies git+https://github.com/fchollet/keras.git@${KERAS_VERSION}
-RUN pip3 install opencv-python==3.4.3.18
-RUN pip3 install tqdm
-RUN pip3 install keras-segmentation
-RUN pip3 install pytesseract
-RUN pip3 install matplotlib
-RUN pip3 install requests
 
-# quick test and dump package lists
-RUN python3 -c "import theano; print(theano.__version__)" \
- && dpkg-query -l > /dpkg-query-l.txt \
- && pip3 freeze > /pip3-freeze.txt
+RUN pip3 install pillow \
+   certifi==2018.11.29 \
+   Click==7.0 \
+   Flask==1.0.2 \
+   gunicorn==19.9.0 \
+   itsdangerous==1.1.0 \
+   Jinja2==2.10.1 \
+   MarkupSafe==1.1.0 \
+   numpy \
+   opencv-contrib-python \
+   Pillow \
+   pytesseract \
+   werkzeug \
+   opencv-python==3.4.3.18 \
+   tqdm \
+   keras-segmentation \
+   matplotlib \
+   requests
 
 COPY vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5 root/.keras/datasets/
 COPY /model ./srv/model
