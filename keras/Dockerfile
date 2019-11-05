@@ -1,7 +1,6 @@
-# docker-keras - Keras in Docker with Python 3 and Theano on CPU
-#If CheckPoints Path Changes, change in the RUN COmmand
-FROM debian:stretch
-MAINTAINER gw0 [http://gw.tnode.com/] <gw.2018@ena.one>
+# docker-keras - Keras in Docker with Python 3 and TensorFlow on GPU
+
+FROM gw000/debian-cuda
 
 # install debian packages
 ENV DEBIAN_FRONTEND noninteractive
@@ -20,7 +19,6 @@ RUN apt-get update -qq \
     python3-virtualenv \
     python3-wheel \
     pkg-config \
-    tesseract-ocr \
     # requirements for numpy
     libopenblas-base \
     python3-numpy \
@@ -32,17 +30,19 @@ RUN apt-get update -qq \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get update -y
-RUN apt-get install -y python-pip python-dev build-essential
-RUN apt update && apt install -y libsm6 libxext6
+# manually update numpy
+RUN pip3 install --upgrade pip
+RUN pip3 --no-cache-dir install -U numpy==1.13.3
 
-ARG THEANO_VERSION=1.0.1
-ENV THEANO_FLAGS='device=cpu,floatX=float32'
-RUN pip3 --no-cache-dir install git+https://github.com/Theano/Theano.git@rel-${THEANO_VERSION}
+ARG TENSORFLOW_VERSION=1.7.0
+ARG TENSORFLOW_DEVICE=gpu
+ARG TENSORFLOW_APPEND=_gpu
+RUN pip3 --no-cache-dir install https://storage.googleapis.com/tensorflow/linux/${TENSORFLOW_DEVICE}/tensorflow${TENSORFLOW_APPEND}-${TENSORFLOW_VERSION}-cp35-cp35m-linux_x86_64.whl
 
 ARG KERAS_VERSION=2.1.4
-ENV KERAS_BACKEND=theano
+ENV KERAS_BACKEND=tensorflow
 RUN pip3 --no-cache-dir install --no-dependencies git+https://github.com/fchollet/keras.git@${KERAS_VERSION}
+
 
 RUN pip3 install pillow \
    certifi==2018.11.29 \
@@ -61,12 +61,12 @@ RUN pip3 install pillow \
    tqdm \
    keras-segmentation \
    matplotlib \
-   requests
+   requests \
+   pymysql
 
 COPY vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5 root/.keras/datasets/
 COPY /model ./srv/model
 COPY /python ./srv/python
 
 WORKDIR /srv/python
-
-CMD executable[ "python3", "./calleable.py" ]
+CMD [ "python3", "./calleable.py" ]

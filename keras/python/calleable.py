@@ -1,33 +1,23 @@
-import os
-from flask import Flask, request
-from werkzeug import secure_filename
-import sys
-from PIL import Image
-import pytesseract
-import cv2
-import processing as proc
-
-modelPath = os.environ.get('MODEL_PATH')
-checkPointPath = os.environ.get('CHECK_POINTS_PATH')
-model = False
+from flask import Flask, request, make_response, jsonify
+from werkzeug.wrappers import json
+import procesamiento as pro
+import queue
 
 app = Flask(__name__)
-UPLOAD_FOLDER = '.'
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024
 
-@app.route('/', methods=['GET', 'POST'])
+image_queue = queue.Queue()
+check_point_path = "../model/checkPoint"
+detector = pro.Detector(image_queue, check_point_path)
+
+@app.route('/', methods=['POST'])
 def upload_file():
     if request.method == 'POST':
-        f = request.files['file']
-        filename = secure_filename(f.filename)
-        filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-        f.save(filepath)
-        texto, auto, placa = proc.getPrediction(model, filepath)
-        os.remove(filepath)
-        return texto
+        id = request.values["id"]
+        image_queue.put(id)
+    data = {'message': 'Created', 'code': 'SUCCESS'}
+    return make_response(jsonify(data), 200)
 
 
 if __name__ == '__main__':
-    model = proc.loadModel(checkPointPath, modelPath)
-    app.run(host="0.0.0.0", port=5001, debug=True)
+    detector.start()
+    app.run(host="0.0.0.0", port=5001, debug=False)
