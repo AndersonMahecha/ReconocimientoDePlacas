@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TableVehiculos</title>
+</head>
+
+<body style="background: -webkit-gradient(linear, left top, right top, from(rgba(255, 122, 51, .8)), color-stop(34%, rgba(249, 132, 48, .8)), color-stop(74%, rgba(242, 143, 44, .8)), color-stop(86%, rgba(241, 150, 45, .8)), to(rgba(239, 159, 46, .8))), no-repeat;">
+
+    <div class="limiter">
+        <div class="container-table100">
+            <strong *ngIf="vehicles">Numero de vehiculos: ( {{vehicles.length}} / 20 )</strong>
+            <div class="webdesigntuts-workshop">
+                <form action="" method="">
+                    <input [(ngModel)]="query" name="query" type="text" placeholder="Search...">
+                </form>
+            </div>
+            <div class="wrap-table100">
+                <div class="table100">
+                    <table>
+                        <thead>
+                            <tr class="table100-head">
+                                <th class="fechaIngreso">Fecha Ingreso</th>
+                                <th class="placa">Placa</th>
+                                <th class="image">Imagen</th>
+                                <th class="color">Color</th>
+                                <th class="tipoVehiculo">Tipo Vehiculo</th>
+                                <th class="dueño">Propietario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let vehicle of vehicles | search: query; let i = index">
+                                <td class="fechaIngreso">{{vehicle.ingreso}}</td>
+                                <td class="placa">{{vehicle.placa}}</td>
+                                <td class="imagen">{{vehicle.image}}</td>
+                                <td class="color">default</td>
+                                <td class="tipoVehicle">{{vehicle.tipoVehiculo}}</td>
+                                <td class="dueño"> {{vehicle.idOwner}}</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

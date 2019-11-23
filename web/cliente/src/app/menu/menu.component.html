@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>MenuComponent</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <nav class="navbar navbar-fixed-top navbar-default ">
+                <div class="container">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a [routerLink]="['/home']" routerLinkActive="router-link-active" title="Busco Parqueadero Carro">Home</a></li>
+                        <li><a [routerLink]="['/registerVehicle']" routerLinkActive="router-link-active" title="Tengo Parqueadero">Registro Vehiculo</a></li>
+                        <li><a [routerLink]="['/factura']" routerLinkActive="router-link-active" title="Tengo Parqueadero">Factura</a></li>
+                        <li><a [routerLink]="['/vehicles']" routerLinkActive="router-link-active" class="visible-xs visible-sm" title="Empresas">Parqueadero</a></li>
+                        <li><a [routerLink]="['/vehicles']" routerLinkActive="router-link-active" class="queo-btn queo-btn-login visible-md visible-lg" title="Empresas">Parqueadero</a></li>
+                        <li><a [routerLink]="['/login']" routerLinkActive="router-link-active" class="visible-xs visible-sm">Ingresa</a></li>
+                        <li ng-hide="visibility"><a [routerLink]="['/register']" routerLinkActive="router-link-active" class="visible-xs visible-sm">Registrar</a></li>
+                        <li><a [routerLink]="['/login']" routerLinkActive="router-link-active" class="visible-md visible-lg queo-btn queo-btn-register">Ingresa</a></li>
+                        <li><a [routerLink]="['/register']" routerLinkActive="router-link-active" class="visible-md visible-lg queo-btn queo-btn-register">Registrar</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="queo-flex-center queo-bg-banner"></div>
+</body>
+
+</html>

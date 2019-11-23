@@ -19,6 +19,7 @@ RUN apt-get update -qq \
     python3-virtualenv \
     python3-wheel \
     pkg-config \
+    tesseract-ocr \
     # requirements for numpy
     libopenblas-base \
     python3-numpy \
@@ -62,11 +63,11 @@ RUN pip3 install pillow \
    keras-segmentation \
    matplotlib \
    requests \
-   pymysql
+   pymysql \
+   cryptography
 
 COPY vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5 root/.keras/datasets/
 COPY /model ./srv/model
 COPY /python ./srv/python
-
 WORKDIR /srv/python
 CMD [ "python3", "./calleable.py" ]

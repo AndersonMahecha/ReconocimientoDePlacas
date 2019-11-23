@@ -2,7 +2,6 @@ import os as os
 import re
 import threading
 import pymysql
-from typing import List
 
 import cv2 as cv2
 import keras_segmentation
@@ -12,7 +11,6 @@ import tensorflow as tf
 from PIL import Image
 from keras import backend as K
 from keras.backend.tensorflow_backend import set_session
-from numpy.core._multiarray_umath import ndarray
 
 
 class Detector(threading.Thread):
@@ -21,11 +19,10 @@ class Detector(threading.Thread):
     config.log_device_placement = False
     sess = tf.Session(config=config)
     set_session(sess)
-    db = pymysql.connect("localhost", "root", "pass", "mydb")
 
-    def __init__(self, image_queues, check_point_path, automovile=True):
+    def __init__(self, image_queues, check_point_path, db):
         threading.Thread.__init__(self)
-        self.automovile = automovile
+        self.db = db
         self.image_queue = image_queues
         self.check_point_path = check_point_path
         self.salida = "temp"
@@ -41,13 +38,11 @@ class Detector(threading.Thread):
     def run(self):
         while True:
             img_path = self.image_queue.get()
-            sql = "SELECT file_path FROM vehiculo_registros WHERE idvehiculo_registro = {} ".format(img_path)
-            cursor = self.db.cursor()
-            cursor.execute(sql)
-            result = cursor.fetchone()
-            if result:
-                text, im1, im2 = self.get_prediction(result[0])
-                print("placa: {} imagen: {}".format(text, result[0]))
+            if img_path:
+                text, im1, im2 = self.get_prediction(img_path)
+                sql = 'INSERT INTO vehiculos (placa, image) VALUES({},{})'.format(text, img_path)
+                cursor = self.db.cursor()
+                cursor.execute(sql)
 
     def get_prediction(self, image_path):
         if not os.path.isdir(self.salida):
@@ -82,8 +77,8 @@ class Detector(threading.Thread):
 
         for i in range(0, num):
             box[i, :] = cv2.boundingRect(cnt[i])
-            l: ndarray = np.zeros((num, 4))
-            max_bon: List[int] = [0, 0]
+            l = np.zeros((num, 4))
+            max_bon = [0, 0]
             for i in range(0, num):
                 l[i, :] = box[i]
                 if l[i, 2] > max_bon[1]:
@@ -95,6 +90,10 @@ class Detector(threading.Thread):
                       (box[0] + box[2], box[1] + box[3]), (255, 0, 0), 2)
 
         gray = cv2.cvtColor(recortada, cv2.COLOR_BGR2GRAY)
+
+        cv2.imshow("test", gray)
+        cv2.waitKey()
+        cv2.destroyAllWindows()
 
         text, gray = self.try_to_decode(gray)
 
@@ -151,3 +150,6 @@ class Detector(threading.Thread):
         placa = re.sub(r'[^\w]', '', placa)
         placa = re.sub(r'[a-z]', '', placa)
         return placa
+
+
+

@@ -1,0 +1,666 @@
+h1.queo-title {
+    color: #fff;
+    font-size: 60px;
+    line-height: 1;
+    text-align: left
+}
+
+h4.queo-title {
+    color: #ff7c33;
+    font-size: 15px;
+    letter-spacing: 3px
+}
+
+.queo-paragraph {
+    color: #717a8a;
+    font-size: 14px;
+    font-weight: 400
+}
+
+p.queo-paragraph {
+    font-size: 19px
+}
+
+.queo-paragraph-quienes {
+    color: #717a8a;
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 14px;
+    text-align: left
+}
+
+.queo-h2-acerca,
+.queo-title {
+    font-weight: 700;
+    text-transform: uppercase
+}
+
+.queo-h2-acerca {
+    color: #fff;
+    font-size: 46px;
+    line-height: 1;
+    text-align: left
+}
+
+.queo-paragraph-h1 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: left
+}
+
+.letra_registro,
+.letra_registro>a {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 900;
+    color: #393d45!important;
+    letter-spacing: 2px;
+    text-transform: uppercase
+}
+
+.queo-subtitle {
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: 1px
+}
+
+.queo-subtitle,
+.queo-title-policy {
+    color: #393d45;
+    text-transform: uppercase
+}
+
+.queo-title-policy {
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center
+}
+
+@media only screen and (min-width:300px) {
+    h1.queo-title {
+        font-size: 39px
+    }
+    .queo-paragraph-h1 {
+        font-size: 12px
+    }
+    h4.queo-title {
+        font-size: 13px
+    }
+    p.queo-paragraph {
+        font-size: 12px
+    }
+    h2.queo-title {
+        font-size: 30px
+    }
+    label.queo-subtitle {
+        font-size: 11px
+    }
+    .queo-subtitle {
+        font-size: 15px
+    }
+    .queo-paragraph-quienes {
+        font-size: 12px
+    }
+    .queo-h2-acerca {
+        font-size: 35px
+    }
+    .queo-title-policy {
+        font-size: 16px!important
+    }
+    .queo-footer,
+    .queo-section-propuestas {
+        text-align: center
+    }
+    .queo-footer {
+        height: auto;
+        width: 100%
+    }
+    .queo-footer li {
+        padding: 10px
+    }
+    .queo-footer-h6 {
+        text-align: center
+    }
+    .stepwizard-step p {
+        display: none
+    }
+    label.button-label {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+    .queo-text-center {
+        text-align: center
+    }
+    .boton-reservar {
+        margin-top: 66px
+    }
+    button.navbar-toggle {
+        display: block;
+        border-color: transparent
+    }
+    button.navbar-times {
+        position: relative;
+        float: right;
+        margin-right: 15px;
+        padding: 9px 10px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        background: transparent none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        display: none
+    }
+    span.icon-bar {
+        background-color: #777
+    }
+    .navbar-nav {
+        margin: 0
+    }
+    .queo-background-companies {
+        height: 135vh
+    }
+    .queo-background-companies,
+    .queo-bg-register {
+        background: -webkit-gradient(linear, left top, right top, from(rgba(255, 122, 51, .7)), color-stop(34%, rgba(249, 132, 48, .7)), color-stop(74%, rgba(242, 143, 44, .7)), color-stop(86%, rgba(241, 150, 45, .7)), to(rgba(239, 159, 46, .7))), no-repeat fixed 50%;
+        background: linear-gradient(90deg, rgba(255, 122, 51, .7) 0, rgba(249, 132, 48, .7) 34%, rgba(242, 143, 44, .7) 74%, rgba(241, 150, 45, .7) 86%, rgba(239, 159, 46, .7)), no-repeat fixed 50%;
+        background-size: cover
+    }
+    .queo-bg-register {
+        height: 145vh
+    }
+    @supports not (-webkit-backdrop-filter:blur()) {
+        .queo-background-companies {
+            height: 135vh
+        }
+        .queo-background-companies,
+        .queo-bg-register {
+            background: -webkit-gradient(linear, left top, right top, from(rgba(255, 122, 51, .7)), color-stop(34%, rgba(249, 132, 48, .7)), color-stop(74%, rgba(242, 143, 44, .7)), color-stop(86%, rgba(241, 150, 45, .7)), to(rgba(239, 159, 46, .7))), no-repeat fixed 50%;
+            background: linear-gradient(90deg, rgba(255, 122, 51, .7) 0, rgba(249, 132, 48, .7) 34%, rgba(242, 143, 44, .7) 74%, rgba(241, 150, 45, .7) 86%, rgba(239, 159, 46, .7)), no-repeat fixed 50%;
+            background-size: cover
+        }
+        .queo-bg-register {
+            height: 145vh
+        }
+    }
+    .queo-padding-9 {
+        padding: 3rem
+    }
+    .bg-payment {
+        background: #fff
+    }
+    .queo-number-index {
+        color: #ff7c33;
+        font-size: 5rem;
+        font-weight: 700;
+        line-height: .5
+    }
+    h2.queo-title-orange {
+        color: #ff7c33;
+        font-size: 35px;
+        text-align: left
+    }
+    .queo-find-list {
+        color: #393d45;
+        font-weight: 400;
+        font-size: 12px;
+        text-align: left
+    }
+    .queo-find-number-padd {
+        padding-top: 1rem
+    }
+    .queo-find-number-padd-2 {
+        padding-top: 1.3rem
+    }
+}
+
+@media only screen and (min-width:480px) {
+    .queo-footer {
+        height: auto;
+        text-align: center;
+        width: 100%
+    }
+    .queo-footer li {
+        padding: 10px
+    }
+    .queo-footer-h6 {
+        text-align: center
+    }
+    h1.queo-title {
+        font-size: 43px
+    }
+    button.navbar-toggle {
+        display: block;
+        border-color: transparent
+    }
+    span.icon-bar {
+        background-color: #777
+    }
+    .navbar-nav {
+        margin: 0!important
+    }
+    p.queo-paragraph {
+        font-size: 11px
+    }
+    .queo-background-companies {
+        height: 135vh
+    }
+    .queo-background-companies,
+    .queo-bg-register {
+        background: -webkit-gradient(linear, left top, right top, from(rgba(255, 122, 51, .7)), color-stop(34%, rgba(249, 132, 48, .7)), color-stop(74%, rgba(242, 143, 44, .7)), color-stop(86%, rgba(241, 150, 45, .7)), to(rgba(239, 159, 46, .7))), no-repeat fixed 50%;
+        background: linear-gradient(90deg, rgba(255, 122, 51, .7) 0, rgba(249, 132, 48, .7) 34%, rgba(242, 143, 44, .7) 74%, rgba(241, 150, 45, .7) 86%, rgba(239, 159, 46, .7)), no-repeat fixed 50%;
+        background-size: cover
+    }
+    .queo-bg-register {
+        height: 145vh
+    }
+    @supports not (-webkit-backdrop-filter:blur()) {
+        .queo-background-companies {
+            height: 135vh
+        }
+        .queo-background-companies,
+        .queo-bg-register {
+            background: -webkit-gradient(linear, left top, right top, from(rgba(255, 122, 51, .7)), color-stop(34%, rgba(249, 132, 48, .7)), color-stop(74%, rgba(242, 143, 44, .7)), color-stop(86%, rgba(241, 150, 45, .7)), to(rgba(239, 159, 46, .7))), no-repeat fixed 50%;
+            background: linear-gradient(90deg, rgba(255, 122, 51, .7) 0, rgba(249, 132, 48, .7) 34%, rgba(242, 143, 44, .7) 74%, rgba(241, 150, 45, .7) 86%, rgba(239, 159, 46, .7)), no-repeat fixed 50%;
+            background-size: cover
+        }
+        .queo-bg-register {
+            height: 145vh
+        }
+    }
+    .bg-payment {
+        background: #fff
+    }
+    .queo-number-index {
+        color: #ff7c33;
+        font-size: 5rem;
+        font-weight: 700;
+        line-height: .5
+    }
+    h2.queo-title-orange {
+        color: #ff7c33;
+        font-size: 35px;
+        text-align: left
+    }
+    .queo-find-list {
+        color: #393d45;
+        font-weight: 400;
+        font-size: 12px;
+        text-align: left
+    }
+    .queo-find-number-padd {
+        padding-top: 1rem
+    }
+    .queo-find-number-padd-2 {
+        padding-top: 1.3rem
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .queo-footer {
+        height: auto;
+        text-align: left;
+        width: 100%
+    }
+    .queo-footer li {
+        padding: 0
+    }
+    .queo-footer-h6 {
+        text-align: left
+    }
+    .queo-subtitle,
+    label.queo-subtitle {
+        font-size: 11px
+    }
+    .queo-footer {
+        height: 190px
+    }
+    p.queo-paragraph {
+        font-size: 11px
+    }
+    label.button-label {
+        display: inline-block;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+    button.navbar-toggle {
+        display: block;
+        border-color: #ddd
+    }
+    span.icon-bar {
+        background-color: #777
+    }
+    .navbar-header {
+        float: none
+    }
+    .queo-title-policy {
+        font-size: 20px!important
+    }
+    .queo-padding-9 {
+        padding: 4rem
+    }
+    .bg-payment {
+        background: #fff
+    }
+    .queo-number-index {
+        color: #ff7c33;
+        font-size: 5rem;
+        font-weight: 700;
+        line-height: .5
+    }
+    h2.queo-title-orange {
+        color: #ff7c33;
+        font-size: 35px;
+        text-align: left
+    }
+    .queo-find-list {
+        color: #393d45;
+        font-weight: 400;
+        font-size: 12px;
+        text-align: left
+    }
+    .queo-find-number-padd {
+        padding-top: 1rem
+    }
+    .queo-find-number-padd-2 {
+        padding-top: 1.3rem
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .navbar-default .navbar-nav li a {
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase
+    }
+    .queo-footer {
+        height: auto;
+        width: 100%
+    }
+    .queo-footer,
+    .queo-footer-h6 {
+        text-align: left
+    }
+    h1.queo-title {
+        font-size: 51px
+    }
+    .queo-paragraph-h1 {
+        font-size: 15px
+    }
+    h4.queo-title {
+        font-size: 14px
+    }
+    p.queo-paragraph {
+        font-size: 11px
+    }
+    h2.queo-title {
+        font-size: 37px
+    }
+    label.queo-subtitle {
+        font-size: 11px
+    }
+    .queo-subtitle {
+        font-size: 15px
+    }
+    .queo-paragraph-quienes {
+        font-size: 13px
+    }
+    .queo-h2-acerca {
+        font-size: 37px
+    }
+    video {
+        display: block
+    }
+    .queo-footer {
+        height: 190px
+    }
+    .stepwizard-step p {
+        display: block
+    }
+    label.button-label {
+        display: inline-block;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+    button#queo-sidenav-open {
+        display: none
+    }
+    .navbar-header {
+        float: left
+    }
+    .queo-padding-9 {
+        padding: 7rem
+    }
+    .bg-payment {
+        background: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(50%, #fff), color-stop(50%, #fafbfc), to(#fafbfc));
+        background: linear-gradient(90deg, #fff 0, #fff 50%, #fafbfc 0, #fafbfc)
+    }
+    .queo-number-index {
+        color: #ff7c33;
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: .5
+    }
+    h2.queo-title-orange {
+        color: #ff7c33;
+        font-size: 37px;
+        text-align: left
+    }
+    .queo-find-list {
+        color: #393d45;
+        font-weight: 400;
+        font-size: 15px;
+        text-align: left
+    }
+    .queo-find-number-padd {
+        padding-top: 1rem
+    }
+    .queo-find-number-padd-2 {
+        padding-top: 1.3rem
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    .navbar-default .navbar-nav li a {
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase
+    }
+    .queo-footer {
+        height: auto;
+        width: 100%
+    }
+    .queo-footer,
+    .queo-footer-h6 {
+        text-align: left
+    }
+    h1.queo-title {
+        font-size: 55px
+    }
+    .queo-paragraph-h1 {
+        font-size: 17px
+    }
+    h4.queo-title,
+    p.queo-paragraph {
+        font-size: 15px
+    }
+    h2.queo-title {
+        font-size: 41px
+    }
+    label.queo-subtitle {
+        font-size: 11px
+    }
+    .queo-subtitle {
+        font-size: 16px
+    }
+    .queo-paragraph-quienes {
+        font-size: 13px
+    }
+    .queo-h2-acerca {
+        font-size: 41px
+    }
+    video {
+        display: block
+    }
+    .queo-footer {
+        height: 190px
+    }
+    .stepwizard-step p {
+        display: block
+    }
+    label.button-label {
+        display: inline-block;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+    .queo-text-center {
+        text-align: left
+    }
+    button.navbar-toggle {
+        display: none
+    }
+    .navbar-header {
+        float: left
+    }
+    .queo-title-policy {
+        font-size: 26px!important
+    }
+    .queo-padding-9 {
+        padding: 7rem
+    }
+    .bg-payment {
+        background: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(50%, #fff), color-stop(50%, #fafbfc), to(#fafbfc));
+        background: linear-gradient(90deg, #fff 0, #fff 50%, #fafbfc 0, #fafbfc)
+    }
+    .queo-number-index {
+        color: #ff7c33;
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: .5
+    }
+    h2.queo-title-orange {
+        color: #ff7c33;
+        font-size: 41px;
+        text-align: left
+    }
+    .queo-find-list {
+        color: #393d45;
+        font-weight: 400;
+        font-size: 17px;
+        text-align: left
+    }
+    .queo-find-number-padd {
+        padding-top: 1rem
+    }
+    .queo-find-number-padd-2 {
+        padding-top: 1.3rem
+    }
+}
+
+@media only screen and (min-width:1440px) {
+    .navbar-default .navbar-nav li a {
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase
+    }
+    .queo-footer {
+        height: auto;
+        width: 100%
+    }
+    .queo-footer,
+    .queo-footer-h6 {
+        text-align: left
+    }
+    h1.queo-title {
+        font-size: 6rem
+    }
+    .queo-paragraph-h1 {
+        font-size: 23px
+    }
+    h4.queo-title,
+    p.queo-paragraph {
+        font-size: 15px
+    }
+    h2.queo-title {
+        font-size: 41px
+    }
+    label.queo-subtitle {
+        font-size: 11px
+    }
+    .queo-subtitle {
+        font-size: 20px
+    }
+    .queo-paragraph-quienes {
+        font-size: 15px
+    }
+    .queo-h2-acerca {
+        font-size: 41px
+    }
+    video {
+        display: block
+    }
+    .queo-footer {
+        height: 190px
+    }
+    .stepwizard-step p {
+        display: block
+    }
+    label.button-label {
+        display: inline-block;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+    .queo-text-center {
+        text-align: left
+    }
+    button.navbar-toggle {
+        display: none
+    }
+    .navbar-header {
+        float: left
+    }
+    .queo-title-policy {
+        font-size: 26px!important
+    }
+    .bg-payment {
+        background: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(50%, #fff), color-stop(50%, #fafbfc), to(#fafbfc));
+        background: linear-gradient(90deg, #fff 0, #fff 50%, #fafbfc 0, #fafbfc)
+    }
+    .queo-number-index {
+        color: #ff7c33;
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: .5
+    }
+    h2.queo-title-orange {
+        color: #ff7c33;
+        font-size: 41px;
+        text-align: left
+    }
+    .queo-find-list {
+        color: #393d45;
+        font-weight: 400;
+        font-size: 23px;
+        text-align: left
+    }
+    .queo-find-number-padd {
+        padding-top: 4rem
+    }
+    .queo-find-number-padd-2 {
+        padding-top: 2rem
+    }
+}
