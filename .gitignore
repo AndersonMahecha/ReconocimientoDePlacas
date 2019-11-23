@@ -107,3 +107,11 @@ venv.bak/
 .mypy_cache/
 keras/vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5
 .vscode
+api/.idea
+
+keras/python/.idea/
+keras/model/
+web/cliente/node_modules/
+keras/.idea/
+web/cliente/e2e/
+web/server/node_modules/

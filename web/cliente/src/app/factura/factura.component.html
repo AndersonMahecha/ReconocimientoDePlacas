@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Example 1</title>
+</head>
+
+<body>
+    <header class="clearfix">
+        <div id="logo">
+
+        </div>
+        <h1>Factura</h1>
+        <div id="company" class="clearfix">
+            <div>ParkAI</div>
+            <div>Bogota(Colombia),<br /></div>
+            <div>(300) 5735883</div>
+            <div><a href="mailto:parkAI@gmail.com">parkAI@gmail.com</a></div>
+        </div>
+        <div class="form-group">
+            <input [(ngModel)]="placa" class="form-control" required="" autocomplete="off" placeholder="Ingrese placa" name="email" type="text" id="placa">
+        </div>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th class="placa">placa</th>
+                    <th class="ingreso">hora Ingreso</th>
+                    <th class="salida">hora Salida</th>
+                    <th class="tipoVehiculo">tipo Vehiculo</th>
+                    <th class="precio/m">Precio/minuto</th>
+                    <th class="precio">Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let vehicle of vehicles | search: placa; let i = index">
+                    <td class="placa">{{vehicle.placa}}</td>
+                    <td class="ingreso">{{vehicle.ingreso}}</td>
+                    <td class="salida">{{factura.salida}}</td>
+                    <td class="tipoVehiculo">{{vehicle.tipoVehiculo}}</td>
+                    <td class="precio/m">{{precioM}}</td>
+                    <td class="precio">${{factura.precio}}</td>
+                </tr>
+
+                <tr>
+                    <td colspan="5">SUBTOTAL</td>
+                    <td class="total">${{factura.precio}}</td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="grand total">GRAND TOTAL</td>
+                    <td class="grand total">${{factura.precio}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="notices">
+            <div>NOTICE:</div>
+            <div class="notice">despues de 30 dias no se responden por reclamos.</div>
+        </div>
+    </main>
+</body>
+
+</html>

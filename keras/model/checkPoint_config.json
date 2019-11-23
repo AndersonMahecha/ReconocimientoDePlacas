@@ -1,0 +1,1 @@
+{"model_class": "vgg_unet", "n_classes": 2, "input_height": 512, "input_width": 704, "output_height": 256, "output_width": 352}

@@ -1,0 +1,13 @@
+HOSTNAME=088028ded36b
+PWD=/srv/python
+HOME=/root
+KERAS_BACKEND=tensorflow
+CHECK_POINTS_PATH=../model/checkPoint
+DEBIAN_FRONTEND=noninteractive
+EXIT_PATH=../temp
+TERM=xterm
+SHLVL=1
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+MODEL_PATH=../model/model.h5
+_=/usr/bin/printenv
+

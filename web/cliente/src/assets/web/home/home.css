@@ -1,0 +1,104 @@
+.queo-banner-section {
+    height: 100vh;
+    overflow: hidden;
+    padding: 0!important;
+    position: relative;
+    width: 100%;
+    z-index: 1
+}
+
+.queo-bg-banner {
+    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 122, 51, .8)), color-stop(34%, rgba(249, 132, 48, .8)), color-stop(74%, rgba(242, 143, 44, .8)), color-stop(86%, rgba(241, 150, 45, .8)), to(rgba(239, 159, 46, .8))), no-repeat;
+    background: transparent;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.queo-box-form {
+    background-color: #fafbfc;
+    border: 1px solid #e3e4e8;
+    padding: 15px;
+    border-radius: 1rem
+}
+
+.queo-section-quienes {
+    padding: 2%
+}
+
+.queo-section-propuestas {
+    border-bottom: 1px solid #e3e4e8;
+    text-align: center;
+    padding: 3%
+}
+
+.queo-imgPadding {
+    padding-bottom: 4%
+}
+
+.queo-section-find {
+    padding: 3% 0
+}
+
+.queo-flex-center-hyv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.queo-img-set-find {
+    width: 100%;
+    padding-top: 2rem
+}
+
+.queo-blank-space2 {
+    height: 4.5rem
+}
+
+.queo-blank-space3 {
+    height: 6.5rem
+}
+
+.queo-flex-center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.queo-bg-quienes {
+    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 122, 51, .7)), color-stop(34%, rgba(249, 132, 48, .7)), color-stop(74%, rgba(242, 143, 44, .7)), color-stop(86%, rgba(241, 150, 45, .7)), to(rgba(239, 159, 46, .7)));
+    background: linear-gradient(90deg, rgba(255, 122, 51, .7) 0, rgba(249, 132, 48, .7) 34%, rgba(242, 143, 44, .7) 74%, rgba(241, 150, 45, .7) 86%, rgba(239, 159, 46, .7));
+    background-size: cover;
+    padding: 3% 0
+}
+
+.queo-h2-padding {
+    padding-bottom: 2%
+}
+
+.queo-img-set {
+    width: 100%
+}
+
+.queo-padding-6 {
+    height: 6vh
+}
+
+.queo-carousel-testimonial {
+    top: 25%
+}
+
+.queo-testimonial-span {
+    color: #717a8a
+}

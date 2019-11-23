@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>RegisterVehicle</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <div class="queo-margin-top"></div>
+        <section class="queo-bg-register aligner-full fondoOrange">
+            <div class="container">
+                <div class="justify-content-center">
+                    <div class="modal-dialog">
+                        <div id="register-form-modal-content" class="modal-content espace130">
+                            <div class="modal-header queo-bb-0">
+                                <h3 class="queo-title">REGÍSTRATE<span class="queo-dot">.</span></h3>
+                                <h4 class="queo-subtitle-login">Registro de Vehiculo</h4>
+                            </div>
+                            <form><input name="_token" type="hidden" value="rSV5qyNnxDoTFOsUKlqyIJEqckYgFrzcKdYXRYkg">
+                                <div class="modal-body queo-box-form">
+                                    <div class="container-fluid">
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="first_name" class="letra_registro">Placa</label>
+                                                        <input [(ngModel)]="vehicle.placa" class="form-control" required="" placeholder="Ingresa tu nombre" name="placa" type="text" id="placa">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="last_name" class="letra_registro">Id Propietario</label>
+                                                        <input [(ngModel)]="vehicle.idOwner" class="form-control" required="" placeholder="Ingresa Identificacion" name="idOwner" type="text" id="idOwner">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="email" class="letra_registro">Marca</label>
+                                                        <input class="form-control" required="" autocomplete="off" placeholder="Ingresa la marca del vehiculo" name="email" type="text" id="email">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input [(ngModel)]="vehicle.tipoVehiculo" required="" autocomplete="off" name="type" type="radio" value="Carro"> <span class="letra_registro">Carro</span>
+                                                        <br>
+                                                        <span class="text-danger" id="error_type"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input [(ngModel)]="vehicle.tipoVehiculo" required="" autocomplete="off" name="type" type="radio" value="Moto"> <span class="letra_registro">Moto</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input [(ngModel)]="vehicle.tipoVehiculo" required="" autocomplete="off" name="type" type="radio" value="Bicicleta"> <span class="letra_registro">bicicleta</span>
+                                                        <br>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="text-center">
+                                        <div class="row">
+                                            <div class="col-md-8 col-md-offset-2">
+                                                <button (click)="register()" id="register-button" type="submit" class="queo-btn-secondary queo-btn center" value="Regístrate">Regístrate</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="row">
+                                            <div class="col-md-8 col-md-offset-2" style="top: 4px;">
+                                                <button (click)="update(vehicle.placa)" id="register-button" type="submit" class="queo-btn-secondary queo-btn center" value="Update">Actualizar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="text-center form-group">
+                            <a [routerLink]="['/login']" routerLinkActive="router-link-active" class="queo-form-forget"> No se si esto sirva despues :) <strong>Ingresa</strong></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

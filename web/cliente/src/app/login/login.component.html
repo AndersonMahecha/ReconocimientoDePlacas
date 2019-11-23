@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>LoginComponent</title>
+</head>
+
+<body style="margin-top: -10px;min-height: 590px;">
+
+    <div id="app">
+        <div>
+        </div>
+        <div class="queo-margin-top"></div>
+        <section class="queo-bg-login aligner-full">
+            <div class="container">
+                <div class="justify-content-center">
+                    <div class="modal-dialog esspace130">
+                        <div id="login-form-modal-content" class="modal-content esp0">
+                            <div class="modal-header queo-bb-0">
+                                <h3 class="queo-title">INGRESA<span class="queo-dot">.</span></h3>
+                                <h4 class="queo-subtitle-login">Ingresa a tu cuenta.</h4>
+                            </div>
+                            <form>
+                                <div class="modal-body queo-box-form">
+                                    <div class="form-group">
+                                        <label class="letra_registro">Correo electrónico</label>
+                                        <input [(ngModel)]="email" class="form-control" required="" autocomplete="off" name="email" type="email">
+                                        <div class="text-danger" id="error-message"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="letra_registro">Contraseña</label>
+                                        <input [(ngModel)]="password" class="form-control" autocomplete="off" name="password" type="password" value="">
+                                    </div>
+                                </div>
+                                <div class="modal-footer text-center">
+                                    <div class="text-center">
+                                        <div class="row">
+                                            <div class="col-md-8 col-md-offset-2">
+                                                <input class="queo-btn-secondary queo-btn text-center" type="button" value="Ingresar" (click)="login()">
+                                                <a class="queo-form-anchor" href="password\reset.html">Olvidé mi
+                                                    contraseña</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="text-center form-group ">
+                            <a [routerLink]="['/register']" routerLinkActive="router-link-active" class="queo-form-forget "> ¿Aún no eres usuario de Queo?
+                                <strong>Regístrate</strong></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
